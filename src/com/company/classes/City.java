@@ -5,10 +5,35 @@ public class City {
     private String cityName;
     private String regionName;
     private String countryName;
-    private int countOfInhabitants;
     private String ZIPCode;
     private String phoneCode;
+    private int countOfInhabitants;
 
+    public City() {
+        this.cityName=null;
+        this.regionName=null;
+        this.countryName=null;
+        this.ZIPCode=null;
+        this.phoneCode=null;
+        this.countOfInhabitants=0;
+    }
+
+    public City(String cityName, String regionName, String countryName) {
+        this.cityName = cityName;
+        this.regionName = regionName;
+        this.countryName = countryName;
+    }
+
+    public City(String cityName, String regionName, String countryName, String ZIPCode, String phoneCode) {
+        this(cityName,regionName,countryName);
+        this.ZIPCode = ZIPCode;
+        this.phoneCode = phoneCode;
+    }
+
+    public City(String cityName, String regionName, String countryName, String ZIPCode, String phoneCode, int countOfInhabitants) {
+        this(cityName,regionName,countryName,ZIPCode,phoneCode);
+        this.countOfInhabitants = countOfInhabitants;
+    }
 
     public String getPhoneCode() {
         return phoneCode;

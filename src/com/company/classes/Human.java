@@ -13,6 +13,36 @@ public class Human {
     private Country country;
     private String address;
 
+    public Human() {
+        this.firstName=null;
+        this.fatherName=null;
+        this.lastName=null;
+        this.birthDate=null;
+        this.phone=null;
+        this.city=null;
+        this.country=null;
+        this.address=null;
+    }
+
+    public Human(String firstName, String fatherName, String lastName) {
+        this.firstName = firstName;
+        this.fatherName = fatherName;
+        this.lastName = lastName;
+    }
+
+    public Human(String firstName, String fatherName, String lastName, Date birthDate, String phone) {
+        this(firstName,fatherName,lastName);
+        this.birthDate = birthDate;
+        this.phone = phone;
+    }
+
+    public Human(String firstName, String fatherName, String lastName, Date birthDate, String phone, City city, Country country, String address) {
+        this(firstName,fatherName,lastName,birthDate,phone);
+        this.city = city;
+        this.country = country;
+        this.address = address;
+    }
+
     public String getFirstName() {
         return firstName;
     }

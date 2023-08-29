@@ -4,10 +4,36 @@ public class Country {
 
     private String countryName;
     private String continentName;
-    private int countOfInhabitants;
     private String phoneCode;
     private String capitalName;
     private String[] namesOfCities;
+    private int countOfInhabitants;
+
+    public Country() {
+        this.countryName=null;
+        this.continentName=null;
+        this.phoneCode=null;
+        this.capitalName=null;
+        this.namesOfCities=null;
+        this.countOfInhabitants=0;
+    }
+
+    public Country(String countryName, String continentName, String capitalName) {
+        this.countryName = countryName;
+        this.continentName = continentName;
+        this.capitalName = capitalName;
+    }
+
+    public Country(String countryName, String continentName, String phoneCode, String capitalName, String[] namesOfCities) {
+        this(countryName,continentName,capitalName);
+        this.phoneCode = phoneCode;
+        this.namesOfCities = namesOfCities;
+    }
+
+    public Country(String countryName, String continentName, String phoneCode, String capitalName, String[] namesOfCities, int countOfInhabitants) {
+        this(countryName,continentName,capitalName,phoneCode,namesOfCities);
+        this.countOfInhabitants = countOfInhabitants;
+    }
 
     public String getCountryName() {
         return countryName;
